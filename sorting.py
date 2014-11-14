@@ -27,16 +27,16 @@ def quickSort(stuff):
         for i in stuff:
             if i < pivot:
                 less.append(i)
+            if i == pivot:
+                pvt.append(i)
             if i > pivot:
                 more.append(i)
-            else:
-                pvt.append(i)
         return quickSort(less) + pvt + quickSort(more)
     else:
         return stuff
 
 
 print('Quick Sort:')
-nums2 = [8, 3, 4, 17]
+nums2 = [8, 3, 4, 17, 1]
 nums2 = quickSort(nums2)
 print(nums2)
